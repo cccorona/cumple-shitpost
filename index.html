@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡¡¡FELIZ CUMPLEAÑOS!!!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- START OVERLAY -->
+    <div id="start-overlay">
+        <div class="overlay-content blink">
+            ¡¡¡ERES EL VISITANTE 1,000,000!!!<br>
+            ¡HAZ CLIC AQUÍ PARA RECLAMAR TU PREMIO! 🤑🤑🤑
+        </div>
+    </div>
+
+    <!-- FAKE SCREEN (The Giant Gift Box) -->
+    <div id="fake-screen" class="breakable-area hidden">
+        
+        <div class="gift-ribbon-vertical"></div>
+        <div class="gift-ribbon-horizontal"></div>
+        <div class="gift-bow">🎀</div>
+
+        <marquee behavior="alternate" scrollamount="45" class="rainbow-text">
+            <h1>¡¡¡FELIZ CUMPLEAÑOS!!!</h1>
+        </marquee>
+
+        <img src="https://media.giphy.com/media/3otPoFwZ4Dih8xXXq0/giphy.gif" alt="Blackpink" class="kpop-gif kpop-1">
+        <img src="https://media.giphy.com/media/l2YWluoNgk342F3k4/giphy.gif" alt="Blackpink Lisa" class="kpop-gif kpop-2">
+        <img src="https://media.giphy.com/media/26BGqofNXjxluwX0k/giphy.gif" alt="Katseye / Kpop" class="kpop-gif kpop-3">
+        <img src="https://media.giphy.com/media/3o7TKPlA0hb9Oj2SqY/giphy.gif" alt="Los Santos Bravos" class="kpop-gif kpop-4">
+
+        <div class="progress-container">
+            <div id="progress-bar" style="height: 100%;">1000000/1000000 HP</div>
+        </div>
+
+    </div>
+
+    <!-- FLYING RAMENS -->
+    <div id="ramen-container" class="hidden"></div>
+
+    <!-- WINAMP PLAYER -->
+    <div id="winamp" class="hidden">
+        <div class="winamp-titlebar">Winamp</div>
+        <div class="winamp-display">
+            <div class="winamp-video-container">
+                <video id="winamp-video" playsinline></video>
+            </div>
+            <div class="winamp-info">
+                <marquee id="track-name" class="winamp-text" scrollamount="3"></marquee>
+                <div class="winamp-time">00:00</div>
+            </div>
+        </div>
+        <div class="winamp-controls">
+            <button id="wa-prev" class="wa-btn">⏮</button>
+            <button id="wa-play" class="wa-btn">▶</button>
+            <button id="wa-pause" class="wa-btn">⏸</button>
+            <button id="wa-stop" class="wa-btn">⏹</button>
+            <button id="wa-next" class="wa-btn">⏭</button>
+            <button id="wa-vol-up" class="wa-btn">🔊</button>
+            <button id="wa-vol-down" class="wa-btn">🔉</button>
+        </div>
+    </div>
+
+    <!-- Right Side Toolbar -->
+    <div class="tools-sidebar hidden" id="sidebar">
+        <button class="tool-btn selected" data-tool="hammer" data-damage="5">🔨</button>
+        <button class="tool-btn" data-tool="saw" data-damage="0.5">🪚</button> 
+        <button class="tool-btn" id="bomb-btn" data-tool="bomb" data-damage="300" disabled>💣</button>
+    </div>
+
+    <!-- REAL INVITATION -->
+    <div id="real-invitation" class="hidden">
+        <div class="invite-content">
+            
+            <div class="invite-left hidden" id="baile-container">
+                <video src="yo_baile.mp4" id="baile-video" loop muted playsinline></video>
+            </div>
+
+            <div class="invite-right">
+                <h1 class="blink">¡SORPRESA!</h1>
+                <h2>Esto era una trampa. Es una invitación a una cita.</h2>
+                <p>Te invito a ir conmigo al restaurante <strong>La Gardela</strong>.</p>
+                <p>Día: <strong>11 de este mes</strong>.</p>
+                
+                <div class="time-selection-area">
+                    <p><strong>Elige la hora de la cita (Selecciona la bolita):</strong></p>
+                    <div class="time-radio-group">
+                        <label class="time-option wrong-time" data-time="18:00">
+                            <input type="radio" name="time" value="18:00">
+                            <span>6:00 PM</span>
+                        </label>
+                        <label class="time-option correct-time" data-time="19:00">
+                            <input type="radio" name="time" value="19:00">
+                            <span>7:00 PM</span>
+                        </label>
+                        <label class="time-option wrong-time" data-time="20:00">
+                            <input type="radio" name="time" value="20:00">
+                            <span>8:00 PM</span>
+                        </label>
+                        <label class="time-option wrong-time" data-time="21:00">
+                            <input type="radio" name="time" value="21:00">
+                            <span>9:00 PM</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="buttons-container">
+                    <button id="btn-yes" class="invite-btn">¡SÍ, ACEPTO!</button>
+                    <div id="btn-no-wrapper">
+                        <button id="btn-no" class="invite-btn">NO, GRACIAS</button>
+                    </div>
+                </div>
+                
+                <div class="gifs-container">
+                    <img src="https://media.giphy.com/media/LpDmM2wSt6Hm5fKJVa/giphy.gif" alt="Hearts" width="150">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
